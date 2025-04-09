@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* 자식 selector */
+        div > img {
+            width: 200px;
+        }
+        a>img {
+            width: 400px;
+        }
+
+        /* 자손 selector */
+        div img {
+        /* div 안에 있는 img 전부 적용 */
+            border: solid 5px black;
+        }
+        div span {
+            color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="../html/사자.webp" alt="">
+        <a href=""><img src="../html/사자.webp" alt="">
+        </a>
+    </div>
+
+    <div>
+        <span>Lorem, ipsum dolor.</span>
+        <h1>Lorem, ipsum.<span>Lorem.</span></h1>
+    </div>
+    <span>Lorem, ipsum dolor.</span>
+
+</body>
+
+</html>
