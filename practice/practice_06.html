@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* 코드상 겉 테두리는 빨간색, 안 테두리는 검은색인 이유는
+            CSS의 border-collapse 속성과 테두리 지정 우선순위 때문일 가능성이 크다.
+            해결 방법 : 겉 테두리를 2px로 하거나 
+            border-collapse 를 collapse 가 아닌 separate 로 변경하여 작성 */
+        .soso {
+            border: 2px solid red; 
+            border-collapse: collapse;
+            width: 400px;
+            height: 300px;
+        }
+        .soso th, .soso td {
+            border: 1px solid black;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- table.soso>(tr>th*4>lorem1)+(tr*4>td*4>lorem1)  /* ctrl + space 로 예시 확인하고 작성 -->
+    <table class="soso">
+        <tr>
+            <th>Lorem.</th>
+            <th>Alias!</th>
+            <th>Dolorem!</th>
+            <th>Vitae.</th>
+    </tr>
+    <tr>
+        <td>Lorem.</td>
+        <td>Iste!</td>
+        <td>Eum.</td>
+        <td>Blanditiis?</td>
+    </tr>
+    <tr>
+        <td>Lorem.</td>
+        <td>Id.</td>
+        <td>Velit!</td>
+        <td>Aliquid!</td>
+    </tr>
+    <tr>
+        <td>Lorem.</td>
+        <td>Dolor.</td>
+        <td>Doloribus.</td>
+        <td>Consequatur?</td>
+    </tr>
+    <tr>
+        <td>Lorem.</td>
+        <td>Rerum!</td>
+        <td>Architecto?</td>
+        <td>Quam!</td>
+    </tr></table>
+
+</body>
+</html>
