@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .container  {
+        .container {
             display: flex;
             width: 80%;
             margin: 0 auto;
             box-sizing: border-box;
         }
+
         .profile {
             width: 30%;
             text-align: center;
             padding: 20px;
         }
+
         .description {
             width: 70%;
             padding: 30px;
             text-align: left;
         }
+
         .profile img {
             width: 200px;
             height: 200px;
@@ -32,13 +36,20 @@
             .container {
                 flex-direction: column;
             }
-            .profile, .description {
+
+            .profile,
+            .description {
                 width: 100%;
                 text-align: center;
             }
         }
+        a:hover {
+            background-color: black;
+            color: red;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="profile">
@@ -46,11 +57,13 @@
             <h2>임재홍</h2>
             <p>프론트엔드 개발자</p>
         </div>
-    </div>
-    <div class="description">
-        <h3>30 | 서울시 동대문구</h3>
-        <p>안녕하세요! 저는 임재홍입니다.</p>
-        <a href="https://github.com/JaehongLIM2">GITHUB</a>
+
+        <div class="description">
+            <h3>30 | 서울시 동대문구</h3>
+            <p>안녕하세요! 저는 임재홍입니다.</p>
+            <a href="https://github.com/JaehongLIM2">GITHUB</a>
+        </div>
     </div>
 </body>
+
 </html>
