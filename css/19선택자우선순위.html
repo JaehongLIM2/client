@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* id, class(pseudo), element */
+        h1 {
+            background-color: skyblue;
+        }
+        .head {
+            background-color: beige;
+        }
+        .head.note {
+            background-color: yellow;
+        }
+        #header1 {
+            background-color: tomato;
+        }
+        .head.note:hover {
+            background-color: orange;
+        }
+        /* 같은 점수면 아래의 것이 우선이 됨 */
+        .head {
+            background-color: salmon;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem.</h1>
+    <h1 class="head">Dignissimos!</h1>
+    <h1 class="head note">Blanditiis.</h1>
+    <h1 id="header1" class="head note">Nobis.</h1>
+    <h1>Voluptates!</h1>
+    <h1>Molestias?</h1>
+    <h1>Molestias!</h1>
+    <h1>Hic.</h1>
+    <h1>Beatae!</h1>
+    <h1>Harum.</h1>
+</body>
+</html>
