@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <!-- element selector -->
+    <h1></h1>
+    <p></p>
+    <!-- 여러개 *숫자 -->
+    <!-- p*2 -->
+    <p></p>
+    <p></p>
+    <!-- h3*4 -->
+    <h3></h3>
+    <h3></h3>
+    <h3></h3>
+    <h3></h3>
+    <!-- 형제 selector + -->
+    <!-- h3+p -->
+    <h3></h3>
+    <p></p>
+    <!-- 자식 selector -->
+    <!-- h3>img -->
+    <h3><img src="" alt=""></h3>
+    <!-- ul>li*3 -->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <!-- h3>a+img -->
+    <h3>
+        <a href=""></a>
+        <img src="" alt="">
+    </h3>
+    <!-- h3>a>img -->
+    <h3>
+        <a href="">
+            <img src="" alt="">
+        </a>
+    </h3>
+    <!-- class selector -->
+    <!-- h3.header -->
+    <h3 class="header"></h3>
+    <!-- p.note*3 -->
+    <p class="note"></p>
+    <p class="note"></p>
+    <p class="note"></p>
+    <!-- id selector -->
+    <!-- h3#header1 -->
+    <h3 id="header1"></h3>
+    <!-- p#note10 -->
+    <p id="note10"></p>
+    <!-- p#note11*3 -->
+    <!-- 같은 아이디를 주면 안됨 -->
+    <p id="note11"></p>
+    <p id="note11"></p>
+    <p id="note11"></p>
+    <!-- 번호증가 -->
+    <!-- p#note$*3 -->
+    <p id="note1"></p>
+    <p id="note2"></p>
+    <p id="note3"></p>
+
+    <!-- div -->
+    <h3 class="header"></h3>
+    <!-- div.header -->
+    <div class="header"></div>
+    <!-- .header -->
+    <div class="header"></div>
+
+    <!-- div#spe1.note.error -->
+    <div id="spe1" class="note error"></div>
+    <!-- #spe2.note.error -->
+    <div id="spe2" class="note error"></div>
+
+    <!-- table>thead+tbody -->
+    <table>
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- 한 부모 위로 ^  -->
+    <!-- table>thead>tr^tbody -->
+    <table>
+        <thead>
+            <tr></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- table>thead>tr>td*3>lorem1^^^tbody -->
+    <table>
+        <thead>
+            <tr>
+                <td>Lorem.</td>
+                <td>Ipsa!</td>
+                <td>Animi?</td>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <!-- table>thead>tr>td*3>lorem1^^^tbody>tr*4>td*3>lorem1 -->
+
+    <table>
+        <thead>
+            <tr>
+                <td>Lorem.</td>
+                <td>Quae!</td>
+                <td>Nulla?</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lorem.</td>
+                <td>Aliquid.</td>
+                <td>Beatae.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Optio!</td>
+                <td>Eveniet.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Harum?</td>
+                <td>Quos.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Recusandae.</td>
+                <td>Illo?</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- table#table1.striped>thead>tr>th.table-header*4>lorem1^^^tbody>tr*3>td.table-cell*4>lorem1 -->
+
+    <table id="table1" class="striped">
+        <thead>
+            <tr>
+                <th class="table-header">Lorem.</th>
+                <th class="table-header">Consequuntur!</th>
+                <th class="table-header">Distinctio.</th>
+                <th class="table-header">Beatae?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="table-cell">Lorem.</td>
+                <td class="table-cell">Voluptatem.</td>
+                <td class="table-cell">Reprehenderit.</td>
+                <td class="table-cell">Autem!</td>
+            </tr>
+            <tr>
+                <td class="table-cell">Lorem.</td>
+                <td class="table-cell">Numquam.</td>
+                <td class="table-cell">Ipsum?</td>
+                <td class="table-cell">Quod?</td>
+            </tr>
+            <tr>
+                <td class="table-cell">Lorem.</td>
+                <td class="table-cell">Odio.</td>
+                <td class="table-cell">Reiciendis!</td>
+                <td class="table-cell">Magnam!</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

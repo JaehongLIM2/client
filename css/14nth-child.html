@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        h1:nth-child(2) {
+            color: red;
+        }
+
+        h1:nth-child(odd) {
+            /* odd 는 홀수 */
+            background-color: skyblue;
+        }
+
+        h1:nth-child(even) {
+            /* even 은 짝수 */
+            border: 5px solid red;
+        }
+
+        table {
+            width: 500px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th {
+            background-color: black;
+            color: white;
+        }
+
+        table.striped tr:nth-child(even) {
+            background-color: gainsboro;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- h1*3>lorem1^div>h1*3>lorem1 -->
+    <h1>Lorem.</h1>
+    <h1>Molestias!</h1>
+    <h1>Totam?</h1>
+    <div>
+        <h1>Lorem.</h1>
+        <h1>Enim.</h1>
+        <h1>Laudantium.</h1>
+    </div>
+    <h1>text</h1>
+
+    <!-- table>thead>tr>th*4>lorem1^^^tbody>tr*5>td*4>lorem1 -->
+    <table>
+        <thead>
+            <tr>
+                <th>Lorem.</th>
+                <th>Expedita.</th>
+                <th>Eaque.</th>
+                <th>Eos.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lorem.</td>
+                <td>Quo.</td>
+                <td>Vitae!</td>
+                <td>Sed?</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Quibusdam?</td>
+                <td>Repellendus.</td>
+                <td>Vero.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Veniam!</td>
+                <td>Unde.</td>
+                <td>Minus?</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Qui?</td>
+                <td>Fuga.</td>
+                <td>Magnam.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Fugit.</td>
+                <td>Laborum?</td>
+                <td>Repudiandae?</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>Lorem.</th>
+                <th>Dolorem!</th>
+                <th>Impedit?</th>
+                <th>Vel.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lorem.</td>
+                <td>Eligendi?</td>
+                <td>Nesciunt.</td>
+                <td>Dolorem.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Similique.</td>
+                <td>Ab?</td>
+                <td>Maiores.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Veritatis?</td>
+                <td>Quos!</td>
+                <td>Beatae?</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Aliquid?</td>
+                <td>Harum.</td>
+                <td>Totam?</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Sint.</td>
+                <td>Id.</td>
+                <td>Odit?</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
