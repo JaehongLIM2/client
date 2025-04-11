@@ -5,10 +5,194 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .upside {
+            display: flex;
+            /* 상속안됨 | 개별적으로 부여*/
+            text-align: center;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 42px;
+            font-weight: 900;
+            color: green;
+            width: 80px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            width: 100px;
+            height: 90px;
+            margin: 10px;
+        }
+
+        .menu:hover {
+            background-color: green;
+        }
+
+        .circle {
+            border-radius: 7px;
+            justify-content: center;
+        }
+
+        .cart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+            width: 120px;
+            height: 90px;
+            margin-left: auto;
+        }
+
+        .cart:hover {
+            background-color: rgb(128, 127, 127, 0.5);
+        }
+
+        .login {
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 90px;
+            margin: 5px;
+        }
+        .box {
+            background-color: rgb(39, 39, 39);
+            color: white;
+            margin-bottom: 10px;
+            height: 70px;
+        }
+        .box-button {
+            width: 300px;
+            height: 70px;
+            flex: 1;
+            text-align: center;
+            align-items: center;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+        .box-button:hover {
+            background-color: gray;
+        }
+        .list {
+            width: 200px;
+            background-color: rgb(128, 128, 128, 0.3);
+            left: 15px;
+            position: fixed;
+        }
+        .h1 {
+            font-weight: 900;
+            font-size: 24px;
+            margin-left: 10px;
+        }
+        .p1 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: 20px;
+            height: 40px;
+        }
+        .p1:hover {
+            background-color: rgb(128, 128, 128, 0.3);
+            font-weight: bold;
+        }
+        .advertisement {
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-right: 20px;
+        }
+        .advertisement img {
+            margin-top: 10px;
+            width: 300px;
+            height: 700px;
+        }
+        .advertisement h1 {
+            width: 300px;
+            text-align: center;
+            margin: 0;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="upside">
+        <div class="logo upside">
+            W
+        </div>
+        <div class="upside">
+            <div class="menu upside">
+                Tutorials
+            </div>
+            <div class="menu upside">
+                Exercises
+            </div>
+            <div class="menu upside">
+                Certificates
+            </div>
+            <div class="menu upside">
+                Services
+            </div>
+        </div>
+        <div class="cart circle upside">
+            Get Certified
+        </div>
+        <div class="upside">
+            <div class="login circle upside">
+                Sign up
+            </div>
+            <div class="login circle upside">
+                Log in
+            </div>
+        </div>
+    </div>
+    <div class="box upside">
+        <div class="box-button upside">HTML</div>
+        <div class="box-button upside">CSS</div>
+        <div class="box-button upside">JAVASCRIPT</div>
+        <div class="box-button upside">SQL</div>
+        <div class="box-button upside">PYTHON</div>
+        <div class="box-button upside">JAVA</div>
+        <div class="box-button upside">PHP</div>
+        <div class="box-button upside">HOW TO</div>
+        <div class="box-button upside">W3.CSS</div>
+        <div class="box-button upside">C</div>
+    </div>
+    <div class="list">
+        <h1 class="h1">HTML Tutorial</h1>
+        <p class="p1">HTML HOME</p>
+        <p class="p1">HTML Introduction</p>
+        <p class="p1">HTML Editors</p>
+        <p class="p1">HTML Basic</p>
+        <p class="p1">HTML Elements</p>
+        <p class="p1">HTML Attributes</p>
+        <p class="p1">HTML Headings</p>
+        <p class="p1">HTML Paragraphs</p>
+        <p class="p1">HTML Styles</p>
+        <p class="p1">HTML Formatting</p>
+        <p class="p1">HTML Quotations</p>
+        <p class="p1">HTML Comments</p>
+        <p class="p1">HTML Colors</p>
+        <p class="p1">HTML CSS</p>
+        <p class="p1">HTML Links</p>
+        <p class="p1">HTML Images</p>
+        <p class="p1">HTML Favicon</p>
 
+    </div>
+    <div class="advertisement">
+        <h1>광고입니다.</h1>
+        <img src="../html/사자.webp" alt="">
+    </div>
 </body>
 
 </html>
