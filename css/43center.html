@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #item1 {
+            width: 150px;
+            height: 50px;
+            background-color: skyblue;
+            margin: auto;
+        }
+        #container1 {
+            display: flex;
+            justify-content: center;
+        }
+        #item2, #item3{
+            background-color: beige;
+            width: 150px;
+            height: 50px;
+        }
+        #container2 {
+            background-color: gold;
+            display: flex;
+            justify-content: center;
+            height: calc(100vh - 100px);
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- div#item$*3{$$} -->
+    <div id="item1">01</div>
+    <div id="container1">
+        <div id="item2">02
+        </div>
+    </div>
+    <div id="container2">
+        <div id="item3">03
+        </div>
+    </div>
+
+</body>
+</html>
