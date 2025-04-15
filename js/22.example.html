@@ -15,8 +15,12 @@
 
     <input type="text" id="input2">
 
-    <!-- .button.btn.btn-primary -->
-    <button class="btn btn-primary" id="plusButton">*</button>
+    <!-- button.btn.btn-primary -->
+    <button class="btn btn-primary" id="plusButton">+</button>
+    <!-- button*3.btn.btn-primary -->
+    <button class="btn btn-danger" id="minusButton">-</button>
+    <button class="btn btn-warning" id="timesButton">*</button>
+    <button class="btn btn-info" id="divideButton">/</button>
     <hr>
     <input type="text" id="resultInput">
 
@@ -25,13 +29,43 @@
         crossorigin="anonymous"></script>
     <script>
         function add() {
-        let num1 = document.querySelector("#input1").value;
-        let num2 = document.querySelector("#input2").value;
+            let num1 = document.querySelector("#input1").value;
+            let num2 = document.querySelector("#input2").value;
 
-        let result = Number(num1) * Number(num2);
-        document.querySelector("#resultInput").value = result
+            let result = Number(num1) + Number(num2);
+            document.querySelector("#resultInput").value = result
         }
+
+        function minus() {
+            let num1 = document.querySelector("#input1").value;
+            let num2 = document.querySelector("#input2").value;
+
+            let result = Number(num1) - Number(num2);
+            document.querySelector("#resultInput").value = result
+
+        }
+        function times() {
+            let num1 = document.querySelector("#input1").value;
+            let num2 = document.querySelector("#input2").value;
+
+            let result = Number(num1) * Number(num2);
+            document.querySelector("#resultInput").value = result
+
+        }
+        function divide() {
+            let num1 = document.querySelector("#input1").value;
+            let num2 = document.querySelector("#input2").value;
+
+            let result = Number(num1) / Number(num2);
+            document.querySelector("#resultInput").value = result
+
+        }
+
         document.querySelector("#plusButton").onclick = add;
+        document.querySelector("#minusButton").onclick = minus
+        document.querySelector("#timesButton").onclick = times
+        document.querySelector("#divideButton").onclick = divide
+
     </script>
 </body>
 
