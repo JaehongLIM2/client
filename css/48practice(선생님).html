@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         .nemo-button {
@@ -47,15 +47,25 @@
 
         .circle-button {
             background-color: green;
+            width: 120px;
             color: white;
             display: flex;
             align-items: center;
+            justify-content: center;
         }
 
         .circle-button:hover {
             background-color: rgb(0, 98, 0);
         }
 
+        #signup {
+            position: relative;
+            left: 49px;
+            padding-right: 15px;
+        }
+        #login {
+            padding-left: 15px;
+        }
         .menu-contanier {
             display: flex;
         }
@@ -79,6 +89,7 @@
         .second-menu-item:hover {
             background-color: green;
         }
+
         .main-content-container {
             display: flex;
             height: 100vh;
@@ -112,28 +123,30 @@
         .side-menu-item:hover {
             background-color: rgb(76, 76, 76);
         }
+
         .top-banner {
-                height: 150px;
-                background-color: skyblue;
-            }
-            .navi-button {
-                color: white;
-                background-color: goldenrod;
-                padding: 16px 20px;
-                border-radius: 5px;
-            }
-            .navi-button-container {
-                display: flex;
-                justify-content: space-between;
-            }
+            height: 150px;
+            background-color: skyblue;
+        }
 
-            .jumbotron {
-                background-color: #d9eee1;
-                border-radius: 5px;
-                padding: 24px;
-                margin-top: 12;
-            }
+        .navi-button {
+            color: white;
+            background-color: goldenrod;
+            padding: 16px 20px;
+            border-radius: 5px;
+        }
 
+        .navi-button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .jumbotron {
+            background-color: #d9eee1;
+            border-radius: 5px;
+            padding: 24px;
+            margin-top: 12;
+        }
     </style>
 </head>
 
@@ -163,12 +176,12 @@
                 Get Certified
             </span>
         </div>
-        <div class="circle-button">
+        <div class="circle-button" id="signup">
             <span>
                 Sign up
             </span>
         </div>
-        <div class="circle-button">
+        <div class="circle-button" id="login">
             <span>
                 Log in
             </span>
@@ -229,36 +242,46 @@
 
         <div class="main-content">
             <!-- 상단배너 -->
-             <div class="top-banner">
-             </div>
+            <div class="top-banner">
+            </div>
             <!-- 제목 -->
-             <h1>HTML Tutorial</h1>
+            <h1>HTML Tutorial</h1>
             <!-- 버튼 두개 -->
-             <div class="navi-button-container">
+            <div class="navi-button-container">
                 <div class="navi-button">Home </div>
                 <div class="navi-button">Next</div>
             </div>
             <!-- 점보트론 -->
-             <!-- .jumbotron>h2>lorem2^p*3>lorem8 -->
-             <div class="jumbotron">
+            <!-- .jumbotron>h2>lorem2^p*3>lorem8 -->
+            <div class="jumbotron">
                 <h2>Lorem, ipsum.</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                 <p>Praesentium, ipsa? Reprehenderit vero ullam inventore fuga? Iure.</p>
                 <p>Expedita dolores iusto ea dicta temporibus illum eligendi?</p>
-             </div>
+            </div>
             <!-- content -->
-             <hr>
-             <!-- (h3>lorem2^p>lorem)*5 -->
-             <h3>Lorem, ipsum.</h3>
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tenetur debitis odit maxime sed dignissimos similique soluta quas sequi corporis modi officia quidem facilis libero, illo id dolorem facere sapiente.</p>
-             <h3>Nostrum, odio.</h3>
-             <p>Illo, autem. Quia aperiam eius nihil autem labore, provident ratione minus veritatis veniam earum. Reprehenderit commodi, hic odit earum minima, id omnis quam repellendus magni officia iste eos officiis accusantium?</p>
-             <h3>Sit, eius?</h3>
-             <p>Eaque sunt tempore mollitia veniam maxime, nesciunt, laborum commodi, placeat molestiae perferendis delectus? Est consequuntur iure rem a sapiente consectetur vitae, saepe doloremque, earum quibusdam necessitatibus modi exercitationem doloribus natus!</p>
-             <h3>Commodi, amet!</h3>
-             <p>Placeat excepturi dignissimos fugiat cum ipsam laborum voluptate, perspiciatis nobis possimus veniam molestias. Quidem magnam nesciunt ipsa sequi? Sequi blanditiis totam quae ducimus non numquam minus vitae cupiditate repudiandae quos?</p>
-             <h3>Praesentium, velit.</h3>
-             <p>Quia veritatis necessitatibus error atque explicabo deserunt doloremque. Praesentium omnis voluptatum nisi saepe, officiis reprehenderit modi quam delectus. Nesciunt, cupiditate fuga cum pariatur ut distinctio culpa dicta a quibusdam harum.</p>
+            <hr>
+            <!-- (h3>lorem2^p>lorem)*5 -->
+            <h3>Lorem, ipsum.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tenetur debitis odit maxime sed dignissimos
+                similique soluta quas sequi corporis modi officia quidem facilis libero, illo id dolorem facere
+                sapiente.</p>
+            <h3>Nostrum, odio.</h3>
+            <p>Illo, autem. Quia aperiam eius nihil autem labore, provident ratione minus veritatis veniam earum.
+                Reprehenderit commodi, hic odit earum minima, id omnis quam repellendus magni officia iste eos officiis
+                accusantium?</p>
+            <h3>Sit, eius?</h3>
+            <p>Eaque sunt tempore mollitia veniam maxime, nesciunt, laborum commodi, placeat molestiae perferendis
+                delectus? Est consequuntur iure rem a sapiente consectetur vitae, saepe doloremque, earum quibusdam
+                necessitatibus modi exercitationem doloribus natus!</p>
+            <h3>Commodi, amet!</h3>
+            <p>Placeat excepturi dignissimos fugiat cum ipsam laborum voluptate, perspiciatis nobis possimus veniam
+                molestias. Quidem magnam nesciunt ipsa sequi? Sequi blanditiis totam quae ducimus non numquam minus
+                vitae cupiditate repudiandae quos?</p>
+            <h3>Praesentium, velit.</h3>
+            <p>Quia veritatis necessitatibus error atque explicabo deserunt doloremque. Praesentium omnis voluptatum
+                nisi saepe, officiis reprehenderit modi quam delectus. Nesciunt, cupiditate fuga cum pariatur ut
+                distinctio culpa dicta a quibusdam harum.</p>
         </div>
         <div class="ad-container"></div>
     </div>
