@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script>
+        // 1번 문제
+        function getGrade(score) {
+            if (score > 100 || score < 0) {
+                console.log("잘못 입력된 점수입니다.");
+            } else if (score >= 90) {
+                console.log("A");
+            } else if (score >= 80) {
+                console.log("B");
+            } else if (score >= 70) {
+                console.log("C");
+            } else if (score >= 60) {
+                console.log("D");
+            } else {
+                console.log("F");
+            }
+        }
+        // 2번 문제
+        for (let num1 = 2; num1 <= 50; num1 += 2) {
+            console.log(num1);
+        }
+
+        // 3번 문제
+        function sumUpTo(n) {
+            let sum = 0;
+            let i = 1;
+            while (i <= n) {
+                sum += i;
+                i++;
+            }
+            console.log(sum);
+        }
+
+        sumUpTo(18)
+
+        // 4번 문제
+        for (let t = 2; t <= 9; t++) {
+            for (let k = 1; k <= 9; k++) {
+                console.log(t + "*" + k + "=" + (t * k));
+                if (k === 9) {
+                    console.log("----");
+                }
+            };
+        }
+
+        // 5번 문제
+        function checkEvenOdd(num5) {
+            if (num5 % 2 === 0) {
+                console.log("짝수입니다.");
+            } else {
+                console.log("홀수입니다.");
+            }
+        }
+
+        // 6번 문제
+        function findMax(a, b, c) {
+            let d = 0;
+            let g = 0;
+            if (a > b) {
+                d = a;
+            } else {
+                d = b;
+            }
+            if (d > c) {
+                g = d;
+            } else {
+                g = c;
+            }
+            console.log(g);
+        }
+        findMax(a, b, c)
+
+        //7번 문제
+        function getDayName(num7) {
+            switch (num7) {
+                case 1:
+                    console.log("월요일");
+                    break
+                case 2:
+                    console.log("화요일");
+                    break
+                case 3:
+                    console.log("수요일");
+                    break
+                case 4:
+                    console.log("목요일");
+                    break
+                case 5:
+                    console.log("금요일");
+                    break
+                case 6:
+                    console.log("토요일");
+                    break
+                case 7:
+                    console.log("일요일");
+                    break
+            }
+        }
+        getDayName(3)
+
+        // 8번 문제
+        function factorial(num8) {
+            let z = 1;
+            for (let x = 1; x <= num8; x++) {
+                z *= x;
+            }
+            return z;
+        }
+
+        console.log(factorial(9));
+
+        // 9번 문제
+        function calculator(a, b, operator) {
+            let result9 = 0;
+
+            if (operator === "+") {
+                result9 = a + b;
+            } else if (operator === "-") {
+                result9 = a - b;
+            } else if (operator === "*") {
+                result9 = a * b;
+            } else if (operator === "/") {
+                result9 = a / b;
+            } else {
+                result9 = "연산자를 잘못 입력하셨습니다"
+            }
+            return result9;
+        }
+
+        console.log(calculator(2, 6, "+"));
+
+
+    </script>
+</body>
+
+</html>
