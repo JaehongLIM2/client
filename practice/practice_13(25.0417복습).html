@@ -95,20 +95,20 @@
         }
 
         // 연습 문제 2-2 
-        let fruits = ["사과", "바나나", "포도"];
+        let fruits1 = ["사과", "바나나", "포도"];
         for (let x = 0; x < 3; x++) {
             console.log(fruits[x]);
         }  // 이것 이상으로는 잘 모르겠어. 
 
         // 연습 문제 2-3
         let scores = [70, 80, 90];
-        let sum = 0;
+        let sum1 = 0;
 
         for (let i = 0; i < 3; i++) {
-            sum += scores[i]
+            sum1 += scores[i]
         }
 
-        let average = sum / 3
+        let average1 = sum1 / 3
         console.log("평균", average);
 
 
@@ -151,9 +151,9 @@
         // 연습 문제 3-3
 
         let score =[85, 90, 78];
-        sum = 0;
+        let sum = 0;
         for (i = 0; i < score.length; i++) {
-            let sum += score[i]
+            sum += score[i]
         }
        let average = sum / score.length
        console.log("평균: ", average);
@@ -176,7 +176,7 @@
         console.log(student3.getAverage());
         
         //연습 문제 3-5
-        
+
         for (i = 1; i < 10; i+=2 ){
             console.log(i);
         }
@@ -187,6 +187,37 @@
             }
         }
 
+
+        // 연습 문제 4-1
+
+        let testScores =[92, 88, 81];
+        sum = 0;
+
+        for (let i = 0; i < testScores.length; i++){
+            sum += testScores[i];
+        }
+
+        let scoreAverage = sum / testScores.length;
+        console.log(scoreAverage);
+
+
+        // 연습 문제 4-2
+
+        let sum4 = 0
+        let student4 = {
+            name : "하은",
+            scores: [100, 95, 87],
+            getAverage: function() {
+                for (let i = 0; i < this.scores.length; i++){
+                    sum4 += this.scores[i]
+
+                    return sum4 / this.scores.length
+                };
+            }
+            
+        }
+        
+        console.log(student4.getAverage());
 
     </script>
 </body>
