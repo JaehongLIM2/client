@@ -78,15 +78,61 @@
         //오늘은 배열문의 구조정도만 배웠다.
 
         //연습 문제 8.
-        let student = {
-            name : 영희,
+        let student1 = {
+            name : "영희",
             score : [80, 90, 70],
             getAverage: function () {
-                console.log((student.score[0]+student.score[1]+student.score[2])/3);
+             return(this.score[0]+this.score[1]+this.score[2])/3;
             }
         }
-        console.log(student.getAverage());
+        console.log(student1.getAverage());
 
+
+        // 연습 문제 2-1
+        for (let i = 1; i <= 5; i ++) {
+            console.log(i);
+            
+        }
+
+        // 연습 문제 2-2 
+        let fruits = ["사과", "바나나", "포도"];
+        let x = fruits[x];
+        for (x = 0; x < 3; x++) {
+            console.log(fruits[x]);
+        }  // 이것 이상으로는 잘 모르겠어. 
+
+        // 연습 문제 2-3
+        let scores = [70, 80, 90];
+        let sum = 0;
+        
+        for(let i = 0; i < 3; i ++) {
+            sum += scores[i]
+        }
+        
+        let average = sum / 3
+        console.log("평균", average);
+        
+       
+        // 연습문제 2-4
+        let student2 = {
+            name: "지훈",
+            scores: [90, 85, 88],
+            getAverage: function () {
+                let sum = 0;
+
+                for (let i = 0; i < 3; i++){
+                    sum +=this.scores[i];
+                }
+                return sum / 3;
+            }
+        };
+        console.log(student2.getAverage());
+
+        // 연습문제 2-5
+        for (let i=2; i <=10; i +=2) {
+            console.log(i);  
+        }
+        // 3,4 번은 솔직하게 예측이 안가서 어려웠는데 5번같은 수준은 할만한거같아.
         
 
     </script>
