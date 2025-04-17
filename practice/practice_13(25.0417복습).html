@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script>
+
+        // 연습 문제 1.
+        let a = 10;
+        function testScope() {
+            let a = 20;
+            console.log(a); // 여기에 출력되는 값은? 정답 : 20 / 이유: 같은 함수 안에 있는 a를 우선으로 인식? 하기 때문
+        }
+        testScope(); // 20 이 출력됨
+        console.log(a); // 여기에 출력되는 값은? 정답 : 10 / 이유 : 함수 밖의 값이 우선이기때문? 함수 안의 것을 실행시킨게 아니기때문에 별도라고 생각함.
+
+        // 연습 문제 2.
+        function multiply(x, y) {
+            return x * y;
+        }
+        console.log(multiply(4));
+        // NaN 이 출력될것같아. 이유는 multiply 함수는 x, y 변수값이 두개가 필요한데 지금 변수값 4만 대입하고 있기때문에.
+
+
+        // 연습 문제 3.
+        let r = function sayHello(name) {
+            return "Hello, " + name;
+        }
+        // 위 함수를 arrow function 으로 바꿔보세요.
+        r = name => { return "Hello, " + name; };
+        r = (name) => "Hello, " + name;
+        r = name => "Hello, " + name;
+        // 단계별로 축약해봤고 임의대로 함수에 변수 r을 할당했어.
+
+
+        // 연습 문제 4.
+        let person = {
+            name: "철수",
+            age: 20,
+            greet: function () {
+                return "안녕하세요. 저는 " + this.name + "입니다.";
+            }
+        }
+        //문제 1. 답안 :' 안녕하세요. 저는 철수입니다. '라고 출력될 것 같아.
+        //문제 2. 답안 : 차이가 없이 둘다 20을 불러오는데 차이가 있을까? 차이점만 물어본다면 잘모르겠어
+
+        // 연습 문제 5.
+        let obj1 = { value: 10 };
+        let obj2 = obj1;
+        obj2.value = 20;
+        console.log(obj1.value);
+
+        // 위 문제코드에서 obj1.value 값은 20이야. 이유는 내가 설명을 잘 못하지만 예를 들어 value 가상의 저장값을 ez1이라고
+        // 한다면 obj1 과 obj2는 같은 가상의 저장값 ez1을 공유하고있기 때문에 obj2.value = 20; 에서
+        // obj1의 value 값도 20으로 동시에 바뀐다기보단, 그 바뀐 값을 사용한다고 생각해
+
+        // 연습 문제 6.
+        greet();
+        function greet() {
+            console.log("안녕!");
+        }
+        //응, 잘 실행된다고 생각해. 함수는 변수와 다르게 함수의 위치에 영향을 받지않아. 라고 밖에 설명을 못하겠어 미안
+        
+        //연습 문제 7.
+        //아직 배우지 못한것이라서 잘 모르겠어.
+        //오늘은 배열문의 구조정도만 배웠다.
+
+        //연습 문제 8.
+        let student = {
+            name : 영희,
+            score : [80, 90, 70],
+            getAverage: function () {
+                console.log((this[0]+this[1]+this[2])/3);
+            }
+        }
+        console.log(student.getAverage());
+
+        
+
+    </script>
+</body>
+
+</html>
