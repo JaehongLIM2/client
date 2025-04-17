@@ -191,13 +191,13 @@
         // 연습 문제 4-1
 
         let testScores =[92, 88, 81];
-        sum = 0;
+        let sum5 = 0;
 
         for (let i = 0; i < testScores.length; i++){
-            sum += testScores[i];
+            sum5 += testScores[i];
         }
 
-        let scoreAverage = sum / testScores.length;
+        let scoreAverage = sum5 / testScores.length;
         console.log(scoreAverage);
 
 
@@ -218,6 +218,22 @@
         }
         
         console.log(student4.getAverage());
+
+
+        //연습 문제 5-1
+
+        let student6 = {
+            name: "현우",
+            scores: [85, 80, 90],
+            getAverage: function () {
+                let sum = 0
+                for(let i = 0; i < this.scores.length; i++){
+                    sum += this.scores[i]
+                }
+                return sum / this.scores.length
+            } 
+        }
+        console.log(student6.getAverage());
 
     </script>
 </body>
