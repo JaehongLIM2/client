@@ -47,6 +47,7 @@
         console.log(e);
         f();
 
+        /* 다른 배경 지식 배우고 다시 돌아오기 */
         function myCode() {
             console.log("myCode 함수1");
             
@@ -61,8 +62,19 @@
         }
         
         myCode();
+        /* */
 
-
+        function yourCode() {
+            let a = function () {
+                console.log("a 함수");
+            }
+            a();
+            function b() {
+                console.log("b 함수");
+            }
+            b();
+        }
+        yourCode();
     </script>
 </body>
 
