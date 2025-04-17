@@ -16,30 +16,23 @@
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
     <script>
-        function myCode() {
-            console.log("myCode의 명령문");
-            
-            return function () {
-                console.log("리턴한 함수");
-            }
+        function myCode(param) {
+            let v = param(5, 3);
+            console.log(v);
         }
 
-        myCode();
-        console.log("-------");
-        
-        let a = myCode; // 출력없음
+        // 각 myCode 호출 코드에 적절한 argument를 넣으세요.
+        myCode(function (a, b) {
+            return a + b
+        }); // 8
+        myCode(function (a, b) {
+            return a - b
+        }); // 2
+        myCode(function (a, b) {
+            return a * b
+        }); // 15
 
-        console.log("-------");
 
-        let b = myCode();
-
-        console.log("-------");
-        
-        b();
-
-        console.log("-------");
-
-        myCode()();
 
     </script>
 </body>

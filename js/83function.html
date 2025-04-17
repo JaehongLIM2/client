@@ -16,30 +16,42 @@
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
     <script>
-        function myCode() {
-            console.log("myCode의 명령문");
-            
-            return function () {
-                console.log("리턴한 함수");
-            }
+        function myCode(param) {
+            let v = param();
+            console.log(v);
         }
 
-        myCode();
+        myCode(function () {
+            return 5;
+        });
+
+        myCode(function () {
+            return 10;
+        });
+        myCode(function () {
+            return " hello";
+        });
+
+        //
+
         console.log("-------");
         
-        let a = myCode; // 출력없음
 
-        console.log("-------");
+        function yourCode(param) {
+            let v = param(2);
+            console.log(v);
+        }
 
-        let b = myCode();
+        yourCode(function (a) {
+            return a;
+        });
+        yourCode(function (a) {
+            return a + a;
+        });
+        yourCode(function (a) {
+            return a * 3;
+        })
 
-        console.log("-------");
-        
-        b();
-
-        console.log("-------");
-
-        myCode()();
 
     </script>
 </body>
