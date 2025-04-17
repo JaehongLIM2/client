@@ -16,31 +16,17 @@
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
     <script>
-        let a = 3;
-        console.log(a);
-        // console.log(b);
         
-
-        if (true) {
-            // 코드 블럭
-
-            // 변수는 선언된 코드 블럭 내에서만 사용 가능
-            // 변수 scope : 선언된 코드 블럭 내
-            let b = 5;
-            console.log(a);
-            console.log(b);
-
-            if (true){
-                console.log(b);
-            }
-        }
-
-        console.log(a);
-        // console.log(b);
+        // a 함수와 b함수를 (arrow function)으로 표현
         
+        let a = (a, b) => console.log(a + b);
+        
+        a(3, 4); // 7
 
+        let b = a => console.log(a * 3);
         
-        
+        b(5); // 15(5*3)
+
     </script>
 </body>
 

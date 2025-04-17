@@ -16,31 +16,30 @@
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
     <script>
-        let a = 3;
-        console.log(a);
-        // console.log(b);
+        let a = {name: "임재홍", job: "학생"}
+        console.log(a.name); // 임재홍
+        a.name = "IM JAEHONG";
+        console.log(a.name); // IM JAEHONG
+        
+        // 새 property 추가
+        a.address = "서울"
+        console.log(a); // {name: 'IM JAEHONG', job: '학생', address: '서울'}
+        console.log(a.address); // 서울
+        
+        // 변경
+        a.address = "Seoul"
+        console.log(a.address); // Seoul
+        
+        console.log("------연습 문제-------");
+
+        let b = {height: 200, weight: 150};
+
+        //코드 작성
+        
+        b.address = "부산"; // 새 property 추가
+        console.log(b.address); // 부산
         
 
-        if (true) {
-            // 코드 블럭
-
-            // 변수는 선언된 코드 블럭 내에서만 사용 가능
-            // 변수 scope : 선언된 코드 블럭 내
-            let b = 5;
-            console.log(a);
-            console.log(b);
-
-            if (true){
-                console.log(b);
-            }
-        }
-
-        console.log(a);
-        // console.log(b);
-        
-
-        
-        
     </script>
 </body>
 

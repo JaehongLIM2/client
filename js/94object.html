@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+</head>
+
+<body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script>
+        let a = {name: "임재홍", age: "30"};
+        console.log(a.name); // 임재홍
+        console.log(a.age); // 30
+        
+        // property 변경하기
+        a.name = "최지원";
+        console.log(a); // {name: '최지원', age: '30'}
+        console.log(a.name); // 최지원
+        console.log(a.age); // 30
+
+        a.age = 34;
+        console.log(a); // {name: '최지원', age: 34}
+        console.log(a.age); // 34
+        
+        let b = {address: "제주", email: "네이버", height: 190};
+        console.log(b.address); // 제주
+        console.log(b.email); // 네이버
+        console.log(b.height); // 190
+         
+        // 코드 작성
+
+        b.address = "서울"
+        b.height = 200
+
+        console.log(b.address); // 서울
+        console.log(b.height); // 200
+        
+        
+        
+    </script>
+</body>
+
+</html>
