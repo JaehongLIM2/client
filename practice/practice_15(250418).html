@@ -1,35 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-
+    <title>성적 처리 프로그램</title>
 </head>
 
 <body>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-        crossorigin="anonymous"></script>
+    <h1>성적 처리 프로그램</h1>
     <script>
+        /* // 간단한 경고 대화상자 출력
+        alert('Hello, World!!');
 
-        let student1 = {
-            name: "임재홍",
-            score: [90, 80, 85],
-            getAverage: function () {
-                let sum = 0
-                for (let i = 0; i < this.score.length; i++) {
-                    sum += this.score[i]
-                }
-                return sum / this.score.length
-            }
+        // 간단한 입력 대화상자 출력
+        let sayHello = prompt('인사말을 입력하세요!');
+        document.write(sayHello);
+        console.log(sayHello);  */
+    </script>
+    <script>
+        //입력 - 이름, 국어, 영어, 수학
+        let name = prompt('이름을 입력하세요.');
+        let kor = Number(prompt('국어를 입력하세요.'));
+        let eng = Number(prompt('영어를 입력하세요.'));
+        let math = Number(prompt('수학을 입력하세요.'));
 
-        }
+        //처리
 
+
+        let tortal = kor + math + eng;
+        let average = tortal / 3;
+
+        document.write('이름 : ' + name + '<br>')
+        document.write('국어 : ' + kor + '<br>')
+        document.write('영어 : ' + eng + '<br>')
+        document.write('수학 : ' + math + '<br>')
+        document.write('총점 : '+ tortal +'<br>')
+        document.write('평균 : '+ average + '<br>')
+
+
+        //출력
     </script>
 </body>
 
