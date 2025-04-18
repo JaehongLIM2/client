@@ -26,8 +26,7 @@
 
         for (let i = 0; i < 5; i++) {
             console.log("*");
-
-        }
+        };
         console.log("--------");
 
         /* 별찍기
@@ -37,7 +36,7 @@
         let stars = "";
         for (let i = 0; i < 5; i++) {
             stars += "*"
-        }
+        };
         console.log(stars);
 
 
@@ -58,7 +57,7 @@
                 stars += "*";
             }
             console.log(stars);
-        }
+        };
 
         console.log("--------");
         /* 별찍기
@@ -75,7 +74,7 @@
                 stars += "*"
             }
             console.log(stars);
-        }
+        };
 
         console.log("--------");
         /* 별찍기
@@ -85,8 +84,8 @@
          ****
         *****
         */
-        
-        for(let i = 1; i <=5; i ++) {
+
+        for (let i = 1; i <= 5; i++) {
             let line = "";
 
             // 공백 출력 : 5 - i개
@@ -99,8 +98,8 @@
                 line += "*";
             }
             console.log(line);
-            
-        }
+
+        };
 
         console.log("--------");
         /* 별찍기
@@ -111,21 +110,46 @@
         *********
         */
 
-        for (let i = 1; i <= 5; i ++) {
+        for (let i = 1; i <= 5; i++) {
             let line = "";
-            
+
             // 공백 : 5 - i 개
-            for (let j = 1; j <= 5 - i; j++){
+            for (let j = 1; j <= 5 - i; j++) {
                 line += " ";
             }
 
             // 별 출력 : 2i -1
-            for (let k = 1; k <= 2*i - 1; k++){
+            for (let k = 1; k <= 2 * i - 1; k++) {
                 line += "*";
             }
             console.log(line);
-        }
+        };
 
+        console.log("--------");
+        /* 별찍기
+        *********
+         *******
+          *****
+           ***
+            *
+        */
+
+        for (let i = 5; i >= 1; i--) {
+            let line = "";
+
+            // 공백 출력 : 5 - i
+            for (let k = 1; k <= 5 - i; k++) {
+                line += " ";
+            }
+            
+            // 별 출력 : 2i - 1
+            for (let j = 1; j <= 2 * i - 1; j++) {
+                line += "*";
+            }
+
+            console.log(line);
+
+        }
 
 
 
