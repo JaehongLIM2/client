@@ -9,7 +9,7 @@
 
 <body>
     <script>
-        
+
         // 결과
         // *
         // *
@@ -29,7 +29,7 @@
         }
 
         console.log("---------");
-        
+
         // 결과
         // *****
         // *****
@@ -46,7 +46,7 @@
         }
 
         console.log("---------");
-        
+
         // 결과
         // *
         // **
@@ -56,14 +56,14 @@
 
         for (let i = 1; i <= 5; i++) {
             let stars = "";
-            for (let j = 1; j <= i; j++){
+            for (let j = 1; j <= i; j++) {
                 stars += "*"
             }
             console.log(stars);
         }
 
         console.log("---------");
-        
+
         // 결과
         //     *
         //    **
@@ -74,7 +74,7 @@
         for (let i = 1; i <= 5; i++) {
             let stars = "";
             // 공백 : 5 - i
-            for (let j = 1; j <= 5 - i; j++){
+            for (let j = 1; j <= 5 - i; j++) {
                 stars += " ";
             }
             // 별 : i
@@ -94,15 +94,15 @@
         //  *******
         // *********
 
-        for (let i = 1; i < 6; i++) {
+        for (let i = 0; i <= 5; i++) {
             //빈 공간 : 5 - i
             let stars = "";
-            for (let j = 1; j <= 5 - i; j++){
+            for (let j = 1; j <= 5 - i; j++) {
                 stars += " ";
             }
             // 별 : 2*i - 1
-            for (let k = 1; k <= 2*i - 1; k++){
-                stars +="*"
+            for (let k = 1; k <= 2 * i - 1; k++) {
+                stars += "*"
             }
             console.log(stars);
         }
@@ -116,14 +116,61 @@
         //    ***
         //     *
 
-        for (let i = 1; i < 6; i++) {
-            // 별 2*i - 1, i는 5부터 작아짐
-            let stars = "";
-            for (let j)
+        for (let i = 0; i <= 5; i++) {
             //빈공간 : 0부터 시작 최대 4, 1개씩 증가
+            let stars = "";
+
+            for (let j = 0; j < i; j++) {
+                stars += " ";
+            }
+            // 별 2*i - 1, i는 5부터 작아짐
+            for (let k = 0; k < 9 - (2 * i); k++) {
+                stars += "*";
+            }
+            console.log(stars);
+
         }
 
+        console.log("---------");
 
+        // 결과
+        //     *
+        //    ***
+        //   *****
+        //  *******
+        // *********
+        // *********
+        //  *******
+        //   *****
+        //    ***
+        //     *
+
+
+        for (let i = 1; i < 5; i++) {
+            //상단단
+            let stars1 = "";
+            for (let j = 0; j < 5 - i; j++) {
+                stars1 += " ";
+            }
+
+            for (let k = 0; k < 2 * i - 1; k++) {
+                stars1 += "*"
+            }
+            console.log(stars1);
+        }
+        for (let i = 0; i <= 5; i++) {
+            //하단
+            let stars2 = "";
+            for (let m = 0; m < i; m++) {
+                stars2 += " ";
+            }
+
+            for (let l = 0; l < 9 - 2 * i; l++) {
+                stars2 += "*";
+            }
+            console.log(stars2);
+
+        }
 
     </script>
 </body>
