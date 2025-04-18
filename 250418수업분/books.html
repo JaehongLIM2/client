@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도서 정보 처리</title>
+</head>
+<body>
+    <h1>도서 정보 처리</h1>
+    <script>
+        // 도서 정보를 저장할 배열
+        let books = [];
+
+        // 3권의 도서 정보 입력받기
+        for (let i = 0; i < 3; i++) {
+            let book = new Object();
+            
+            // 사용자로부터 책 제목, 저자, 가격 입력받기
+            book.title = prompt('책 제목을 입력하세요:');
+            book.author = prompt('저자를 입력하세요:');
+            book.price = Number(prompt('가격을 입력하세요:'));
+
+            // 배열에 도서 정보 저장
+            books.push(book);
+        }
+
+        // 모든 도서 정보 출력하기
+        let result = '모든 도서 정보: <br>';
+        for (let book of books) {
+            result += `제목: ${book.title}, 저자: ${book.author}, 가격: ${book.price}원 <br>`;
+        }
+
+        // 가장 비싼 책 정보 출력하기
+        let mostExpensiveBook = books[0];
+        for (let book of books) {
+            if (book.price > mostExpensiveBook.price) {
+                mostExpensiveBook = book;
+            }
+        }
+
+        result += `<br><strong>가장 비싼 책:</strong><br>`;
+        result += `제목: ${mostExpensiveBook.title}, 저자: ${mostExpensiveBook.author}, 가격: ${mostExpensiveBook.price}원`;
+
+        // 결과를 HTML 문서에 출력
+        document.write(result);
+    </script>
+</body>
+</html>

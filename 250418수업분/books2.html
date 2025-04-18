@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도서 정보 처리</title>
+</head>
+<body>
+    <h1>도서 정보 처리</h1>
+
+    <script>
+        let books = [];
+
+        for (let i = 0; i < 3; i++) {
+            let book = {};
+
+            book.title = prompt("책 제목을 입력하세요:");
+            book.author = prompt("저자를 입력하세요:");
+            book.price = Number(prompt("가격을 입력하세요:"));
+
+            books.push(book);
+        }
+
+        let result = "모든 도서 정보는 다음과 같습니다:<br><br>";
+
+        // 모든 도서 정보 출력
+        for (let i = 0; i < books.length; i++) {
+            result += `제목: ${books[i].title}, 저자: ${books[i].author}, 가격: ${books[i].price}원<br>`;
+        }
+
+        // 가장 비싼 책을 찾는 부분
+        let mostExpensiveBook = books[0];
+
+        for (let i = 1; i < books.length; i++) {
+            if (books[i].price > mostExpensiveBook.price) {
+                mostExpensiveBook = books[i];
+            }
+        }
+
+        // 가장 비싼 책 출력
+        result += `<br><strong>가장 비싼 책:</strong><br>`;
+        result += `제목: ${mostExpensiveBook.title}, 저자: ${mostExpensiveBook.author}, 가격: ${mostExpensiveBook.price}원`;
+
+        // 결과를 웹 페이지에 출력
+        document.write(result);
+    </script>
+</body>
+</html>

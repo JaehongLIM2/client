@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>성적 처리 프로그램</title>
+    <title>성적 처리프로그램</title>
 </head>
 <body>
-    <h1>성적 처리 프로그램</h1>
+    <h1>성적 처리프로그램</h1>
 
     <script>
         // 입력
-        // localStorage 에 저장된 데이터들을 각 변수로 읽어옴
+        // localstrage에 저장된 데이터들을 각 변수로 읽어옴
         // localStorage.getItem(키);
-
+        // 역직렬화 : JSON.parse(객체)
         let names = JSON.parse(localStorage.getItem("names"));
         let kors = JSON.parse(localStorage.getItem("kors"));
         let engs = JSON.parse(localStorage.getItem("engs"));
@@ -21,16 +21,15 @@
         let avgs = JSON.parse(localStorage.getItem("avgs"));
         let grds = JSON.parse(localStorage.getItem("grds"));
 
-
-
         // 출력
-        for (let student of students) {
-            document.write(`이름 : ${student.name} <br>
-         국어 : ${student.kor}, 영어 : ${student.eng}, 수학 : ${student.math} <br>
-         총점 : ${student.total}, 평균 : ${student.average.toFixed(0)}, 학점 : ${student.grade} 
-         <br><br><br>`)
+        let result = '';
+        for (let i = 0; i < names.length; ++i) {
+            result += `이름 : ${names[i]}, 국어 : ${kors[i]}, 
+                영어 : ${engs[i]}, 수학 : ${maths[i]} <br>`;
+            result += `총점 : ${tots[i]}, 평균 : ${avgs[i]}, 
+                학점 : ${grds[i]} <p>`;            
         }
-
+        document.write(result);
     </script>
 </body>
 </html>
