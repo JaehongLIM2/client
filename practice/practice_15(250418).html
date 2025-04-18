@@ -30,14 +30,26 @@
 
         let tortal = kor + math + eng;
         let average = tortal / 3;
+        let grade = '가';
+        if (average >= 90) grade = "수";
+            else if (average >= 80) grade = "우";
+            else if (average >= 70) grade = "미";
+            else if (average >= 60) grade = "양";
 
-        document.write('이름 : ' + name + '<br>')
+        /* document.write('이름 : ' + name + '<br>')
         document.write('국어 : ' + kor + '<br>')
         document.write('영어 : ' + eng + '<br>')
         document.write('수학 : ' + math + '<br>')
-        document.write('총점 : '+ tortal +'<br>')
-        document.write('평균 : '+ average + '<br>')
+        document.write('총점 : '+ tortal + '<br>')
+        document.write('평균 : '+ average.toFixed(1) + '<br>') */
 
+        document.write(`이름 : ${name} <br>`)
+        document.write(`국어 : ${kor} <br>`)
+        document.write(`영어 : ${eng} <br>`)
+        document.write(`수학 : ${math} <br>`)
+        document.write(`총점 : ${tortal} <br>`)
+        document.write(`평균 : ${average.toFixed(1)} <br>`)
+        document.write(`학점 : ${grade} <br>`)
 
         //출력
     </script>
