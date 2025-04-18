@@ -17,7 +17,18 @@
         crossorigin="anonymous"></script>
     <script>
 
+        let student1 = {
+            name: "임재홍",
+            score: [90, 80, 85],
+            getAverage: function () {
+                let sum = 0
+                for (let i = 0; i < this.score.length; i++) {
+                    sum += this.score[i]
+                }
+                return sum / this.score.length
+            }
 
+        }
 
     </script>
 </body>
