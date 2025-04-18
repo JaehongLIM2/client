@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script>
+        /* 별찍기
+        *
+        *
+        *
+        *
+        * 
+        */
+
+        for (let i = 0; i < 5; i++) {
+            console.log("*");
+
+        }
+        console.log("--------");
+
+        /* 별찍기
+        *****
+        */
+
+        let stars = "";
+        for (let i = 0; i < 5; i++) {
+            stars += "*"
+        }
+        console.log(stars);
+
+
+
+        console.log("--------");
+        /* 별찍기
+        *****
+        *****
+        *****
+        *****
+        *****
+
+        */
+
+        for (let i = 0; i < 5; i++) {
+            let stars = "";
+            for (let j = 0; j < 5; j++) {
+                stars += "*";
+            }
+            console.log(stars);
+        }
+
+        console.log("--------");
+        /* 별찍기
+        *
+        **
+        ***
+        ****
+        *****
+        */
+
+        for (let i = 1; i < 6; i++) {
+            let stars = "";
+            for (let j = 0; j < i; j++) {
+                stars += "*"
+            }
+            console.log(stars);
+        }
+
+        console.log("--------");
+        /* 별찍기
+            *
+           **
+          ***
+         ****
+        *****
+        */
+        
+        for(let i = 1; i <=5; i ++) {
+            let line = "";
+
+            // 공백 출력 : 5 - i개
+            for (let j = 1; j <= 5 - i; j++) {
+                line += " ";
+            }
+
+            // 별 출력 : i 개
+            for (let k = 1; k <= i; k++) {
+                line += "*";
+            }
+            console.log(line);
+            
+        }
+
+        console.log("--------");
+        /* 별찍기
+            *
+           ***
+          *****
+         *******
+        *********
+        */
+
+        for (let i = 1; i <= 5; i ++) {
+            let line = "";
+            
+            // 공백 : 5 - i 개
+            for (let j = 1; j <= 5 - i; j++){
+                line += " ";
+            }
+
+            // 별 출력 : 2i -1
+            for (let k = 1; k <= 2*i - 1; k++){
+                line += "*";
+            }
+            console.log(line);
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
