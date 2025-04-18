@@ -10,6 +10,17 @@
 <body>
     <h1>성적 처리 프로그램</h1>
 
+
+    <script>
+        const getGrade = (average) => {
+            if (average >= 90) return "A";
+            else if (average >= 80) return "B";
+            else if (average >= 70) return "C";
+            else if (average >= 60) return "D";
+            else return 'F';
+        };
+    </script>
+
     <script>
 
         let students = [];
@@ -24,12 +35,7 @@
 
             let total = kor + math + eng;
             let average = total / 3;
-            let grade = 'F';
-
-            if (average >= 90) grade = "A";
-            else if (average >= 80) grade = "B";
-            else if (average >= 70) grade = "C";
-            else if (average >= 60) grade = "D";
+            let grade = getGrade(average)
 
             students.push({
                 name,
@@ -43,10 +49,10 @@
         }
 
         for (let student of students) {
-        document.write(`이름 : ${student.name} <br>
+            document.write(`이름 : ${student.name} <br>
          국어 : ${student.kor}, 영어 : ${student.eng}, 수학 : ${student.math} <br>
          총점 : ${student.total}, 평균 : ${student.average.toFixed(0)}, 학점 : ${student.grade} 
-         <br><br><br>`)       
+         <br><br><br>`)
         }
     </script>
 </body>
