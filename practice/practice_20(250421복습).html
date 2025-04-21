@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div id="box1">안녕하세요</div>
+    <h1>제목입니다</h1>
+    <p class="text">내용입니다</p>
+    <p class="item">1</p>
+    <p class="item">2</p>
+    <li class="menu">Home</li>
+    <li class="menu">About</li>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script>
+        // 배열 연습
+        let a = [1, 2, 3, 4, 5];
+        a.push(6);
+        console.log(a); // 1, 2, 3, 4, 5, 6
+        a.pop();
+        console.log(a); // 1, 2, 3, 4, 5
+        let b = a.filter(e => e % 2 === 0);
+        console.log(b);
+
+        console.log("--------");
+
+        // 객체 연습
+        let c = {
+            name : "임재홍",
+            age : "30",
+            city : "제주"
+        };
+        c.city = "서울";
+        console.log(c); // 모든 값
+        console.log(c.name);
+        console.log(c.age);
+        console.log(c.city);
+         
+        console.log("--------");
+        // 문자열 연습
+        let d = "JavaScript is Awesome!"
+        let e = d.toLowerCase();
+        console.log(e);
+        
+        // 문자열에서 replace는 아직 배우지않음 (gpt참고함)
+
+        let f = "홍길동";
+        console.log(f.charAt(f.length - 1));
+
+        // dom 선택 복습 문제
+
+        // id 로 요소 선택하기
+        let box = document.getElementById("box1");
+        console.log(box);
+
+        // class 로 요소 선택하기
+        let text = document.querySelector(".text");
+        console.log(text.innerText);
+
+        // 태그로 요소 선택하기
+        
+        let title1 = document.querySelector("h1");
+        console.log(title1.innerText);
+
+        let title2 = document.getElementsByTagName("h1")[0];
+        console.log(title2.innerText);
+
+        // 여러 요소 중 첫 번째만 선택하기
+
+        let item1 = document.querySelector(".item");
+        console.log(item1.innerText);
+        
+        let item2 = document.getElementsByClassName("item");
+        console.log(item2[0].innerText);
+        
+        // 여러 요소를 모두 선택해서 출력해보기
+
+        let all1 = document.querySelectorAll(".menu");
+        console.log(all1);
+        
+        
+
+
+
+        
+        
+        
+
+    </script>
+</body>
+
+</html>
