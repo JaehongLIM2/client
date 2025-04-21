@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+</head>
+
+<body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script>
+        // indexOf : 특정 문자열의 위치(index) 리턴, 없으면 -1 리턴
+
+        let a = "I'm Donald Trump";
+        let b = a.indexOf("Donald");
+        console.log(b);
+        console.log(a.indexOf("Donald")); // 4
+        console.log(a.indexOf("Trump")); // 11
+        console.log(a.indexOf("m")); // 2  *첫 번째로 발견된 문자열
+        console.log(a.indexOf(" ")); // 3
+        console.log(a.indexOf("I")); // 0
+        console.log(a.indexOf("donald")); // -1  *없음
+        
+        console.log("---------------");
+        // 두번째 파라미터로 검색 시작 위치를 지정할 수 있음
+        console.log(a.indexOf("Donald", 0)); // 4
+        console.log(a.indexOf("Trump", 0)); // 11
+        console.log(a.indexOf("m", 0)); // 2  *첫 번째로 발견된 문자열
+        console.log(a.indexOf(" ", 0)); // 3
+        console.log(a.indexOf("I", 0)); // 0
+        console.log(a.indexOf("donald", 0)); // -1  *없음
+        
+        console.log("---------------");
+        console.log(a.indexOf("m", 3)); // 14  *그 다음 m의 위치
+
+        console.log("-----연습 Donald가 나오는 위치 찾기");
+        let c = "Donald said that Donald told Donald to remind Donald that Donald was late";
+        let keyword = "Donald";
+
+
+        // for문으로 찾기
+        for(let i = 0; i < c.length; i++ ){
+            let index = c.indexOf(keyword, i);
+            if(index !== -1){
+                console.log(index);
+                i = index;
+            } else {
+                break;
+            }
+        }
+        
+        //while문으로 찾기
+
+        let k = c.indexOf("Donald");
+        
+        while (k !== -1){
+            console.log(k);
+            k = c.indexOf("Donald", k + 1);
+        }
+
+
+        
+    </script>
+</body>
+
+</html>
