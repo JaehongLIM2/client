@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- p#para1.note.error.special.dark>lorem1 -->
+    <p id="para1" class="note herror special dark">Lorem.</p>
+    <button id="btn1">토글</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script>
+        let a = document.querySelector("#para1").className;
+        // class 는 let 같은 키워드라 className 으로 사용
+        console.log(a);
+
+
+        // 불편한 코드 (안좋은 예)
+
+        let b = a.includes("error");
+        console.log(b);
+
+
+        let c = a.split(" ");
+        for (let i = 0; i < c.length; i++) {
+            if (c[i] === "herror") {
+                console.log("있다");
+            }
+        }
+
+        // classList property 로 class 를 읽거나 조작할 수 있음
+        let d = document.querySelector("#para1").classList;
+
+        // 해당 클래스가 있는지 ?
+        console.log(d.contains("error"));
+        console.log(d.contains("herror"));
+        
+        // 클래스 추가하기
+        d.add("react");
+        d.add("css");
+
+        // 클래스 삭제하기
+
+        d.remove("dark");
+        d.remove("herror");
+        d.remove("light"); // 없는 것을 삭제해도 아무 일도 일어나진 않음
+
+        // 클래스 toggle
+        document.querySelector("#btn1").addEventListener("click", () => {
+            let l = document.querySelector("#para1").classList;
+            l.toggle("light");
+        })
+
+
+    </script>
+</body>
+
+</html>
