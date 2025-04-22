@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <style>
+        .done {
+            text-decoration-line: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- input#input1+button#btn1{+}+hr+ul#list1 -->
+    <input type="text" id="input1">
+    <button id="btn1">+</button>
+    <hr>
+    <ul id="list1"></ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script>
+        document.querySelector("#btn1").addEventListener("click", () => {
+            let v = document.querySelector("#input1").value.trim();
+            if (v === "") return;
+
+            let li = document.createElement("li");
+            li.innerHTML = `
+                 ${v} <button class="ex1">완료</button>
+                 <button class="ex2">삭제</button>
+                 `;
+            document.querySelector("#list1").prepend(li);
+       
+
+        let doneBtn = li.querySelector(".ex1");
+        let deleteBtn = li.querySelector(".ex2");
+
+        doneBtn.addEventListener("click", () => {
+            li.classList.toggle("done");
+            if (li.classList.contains("done")) {
+                doneBtn.textContent = "취소";
+            } else {
+                doneBtn.textContent = "완료";
+            }
+        });
+
+
+        deleteBtn.addEventListener("click", () => {
+            li.remove();
+        });
+
+        document.querySelector("#input1").value = "";
+    });
+    </script>
+</body>
+
+</html>
