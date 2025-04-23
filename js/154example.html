@@ -90,7 +90,7 @@
             // dom 에 있는 deone-btn-1 버튼에 click event 함수 추가하기
             // #{} 를 사용하기 위해선 ``(백틱) 사용하기
             let doneBtn = document.querySelector(`#done-btn-${sequence}`);
-            doneBtn.addEventListener("click", function () {
+            doneBtn.addEventListener("click", () => {
                 // 텍스트가 있는 요소에
                 let textDiv = document.querySelector(`#todo-text-${sequence}`);
 
