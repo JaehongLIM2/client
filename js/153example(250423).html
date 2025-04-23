@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <style>
+        .done {
+            text-decoration-line: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="input1"><button id="btn1">+</button>
+    <ul id="list1"></ul>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script>
+        document.querySelector("#btn1").addEventListener("click", () => {
+            let v = document.querySelector("#input1").value;
+            let newLi = document.createElement("li");
+
+            newLi.textContent = v;
+
+            /*
+            append() : 컨텐츠를 선택된 요소 내부의 끝부분에서 삽입 (자식)
+            prepend() : 컨텐츠를 선택된 요소 내부의 시작부분에서 삽입 (자식)
+
+            after() : 선택한 요소 뒤에 컨텐츠 삽입 (형제)
+            before() : 선택한 요소 앞에 컨텐츠 삽입 (형제)
+            */
+
+            let ul = document.querySelector("#list1");
+            ul.append(newLi);
+
+            let doneBtn = document.createElement("button");
+            doneBtn.textContent = "완료";
+
+            newLi.append(doneBtn);
+
+            // 완료 버튼 눌렀을때 done 클래스 추가
+            // classList. 에서 add면 단순 추가, toggle 이면 켜고끄기 가능
+
+            doneBtn.addEventListener("click", () => {
+                newLi.classList.toggle("done")
+            
+            // if 문을 밖으로 내놓으면 적용 X
+            // contains :선택한 요소가 특정한 부모요소에 속해있는지를 확인할때 사용
+                if (newLi.classList.contains("done")) {
+                    doneBtn.textContent = "취소";
+                } else {
+                    doneBtn.textContent = "완료";
+                }
+
+            })
+
+
+
+            // 삭제 버튼 추가
+
+            let deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "삭제"
+
+            newLi.append(deleteBtn);
+
+            // 삭제 버튼 눌렀을때 삭제되게
+
+            deleteBtn.addEventListener("click", () => {
+                newLi.remove();
+            })
+
+            document.querySelector("input").value = "";
+        })
+    </script>
+</body>
+
+</html>
