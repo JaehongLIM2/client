@@ -43,72 +43,7 @@
                 <!-- ul#list1.list-group -->
                 <ul id="list1" class="list-group">
                     <!-- li.list-group-item.d-flex.justify-content-between*5>div*2 -->
-                    <li class="list-group-item d-flex justify-content-between">
-                        <div>빨래</div>
-                        <div>
-                            <!-- .d-flex.gap-2>button.btn.btn-primary*2 -->
-                            <div class="d-flex gap-2">
-                                <button class="btn btn-outline-info btn-sm">
-                                    <i class="fa-solid fa-check"></i>
-                                </button>
-                                <button class="btn btn-outline-danger btn-sm">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between">
-                        <div class="text-decoration-line-through">청소</div>
-                        <div>
-                            <div class="d-flex gap-2">
-                                <button class="btn btn-outline-secondary btn-sm">
-                                    <i class="fa-solid fa-rotate-left"></i>
-                                </button>
-                                <button class="btn btn-outline-danger btn-sm">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between">
-                        <div class="text-decoration-line-through">공부</div>
-                        <div>
-                            <div class="d-flex gap-2">
-                                <button class="btn btn-outline-secondary btn-sm">
-                                    <i class="fa-solid fa-rotate-left"></i>
-                                </button>
-                                <button class="btn btn-outline-danger btn-sm">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between">
-                        <div>운동</div>
-                        <div>
-                            <div class="d-flex gap-2">
-                                <button class="btn btn-outline-info btn-sm">
-                                    <i class="fa-solid fa-check"></i>
-                                </button>
-                                <button class="btn btn-outline-danger btn-sm">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between">
-                        <div>출근</div>
-                        <div>
-                            <div class="d-flex gap-2">
-                                <button class="btn btn-outline-info btn-sm">
-                                    <i class="fa-solid fa-check"></i>
-                                </button>
-                                <button class="btn btn-outline-danger btn-sm">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -118,8 +53,15 @@
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
     <script>
+        // 여러 요소에 사용될 아이디 번호
+        let globalSequence = 0;
+
         // + 버튼을 클릭하면
         document.querySelector("#btn1").addEventListener("click", () => {
+            // sequence 에 1 더하기
+            globalSequence++;
+
+            let sequence = globalSequence;
 
 
             // input 에 있는 value 를 읽어서
@@ -139,13 +81,13 @@
             let newItem = document.createElement("li");
             newItem.className = "list-group-item d-flex justify-content-between";
             newItem.innerHTML = `
-                        <div>${v}</div>
+                        <div id="todo-text-${sequence}">${v}</div>
                         <div>
                             <div class="d-flex gap-2">
-                                <button class="btn btn-outline-info btn-sm">
+                                <button id="done-btn-${sequence}" class="btn btn-outline-info btn-sm">
                                     <i class="fa-solid fa-check"></i>
                                 </button>
-                                <button class="btn btn-outline-danger btn-sm">
+                                <button id="remove-btn-${sequence}" class="btn btn-outline-danger btn-sm">
                                     <i class="fa-solid fa-trash"></i>
                                 </button>
                             </div>
@@ -156,7 +98,41 @@
             let ul = document.querySelector("#list1");
             ul.append(newItem);
 
-        })
+            // dom 에 있는 deone-btn-1 버튼에 click event 함수 추가하기
+            // #{} 를 사용하기 위해선 ``(백틱) 사용하기
+            let doneBtn = document.querySelector(`#done-btn-${sequence}`);
+            doneBtn.addEventListener("click", function() {
+                // 텍스트가 있는 요소에
+                let textDiv = document.querySelector(`#todo-text-${sequence}`);
+
+                // text-decoration-line-through 클래스 추가 / 삭제
+                textDiv.classList.toggle("text-decoration-line-through");
+
+                // text-decoration-line-through 클래스가 있으면
+                if (textDiv.classList.contains("text-decoration-line-through")) {
+                    // 버튼 내용을 back 아이콘으로
+                    doneBtn.innerHTML = `<i class="fa-solid fa-rotate-left"></i>`;
+                    // 버튼색 (secondary 컬러)
+                    doneBtn.classList.add("btn-outline-secondary");
+                    doneBtn.classList.remove("btn-outline-info");
+                } else {
+                    // 없으면 check 아이콘으로
+                    doneBtn.innerHTML = `<i class="fa-solid fa-check"></i>`;
+                    // 버튼 색 (info 컬러)
+                    doneBtn.classList.remove("btn-outline-secondary");
+                    doneBtn.classList.add("btn-outline-info");
+
+                };
+            });
+            // remove-btn-숫자 버튼을 클릭하면
+            document.querySelector(`#remove-btn-${sequence}`).addEventListener("click", () => {
+                // newItem 객체 삭제
+                newItem.remove();
+            })
+            
+
+
+        });
     </script>
 </body>
 
